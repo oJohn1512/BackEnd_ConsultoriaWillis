@@ -1,4 +1,6 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-src/main/resources/credentials.json
+credentials.json
+tokens/
+target/
