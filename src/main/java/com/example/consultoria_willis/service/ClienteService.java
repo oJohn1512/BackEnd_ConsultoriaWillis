@@ -6,7 +6,7 @@ import com.example.consultoria_willis.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -51,4 +51,5 @@ public class ClienteService {
                 .orElseThrow(() -> new RuntimeException("Cliente não existe"));
         clienteRepository.deleteById(cliente.getId());
     }
+
 }

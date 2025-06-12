@@ -40,6 +40,7 @@ public class AutenticacaoController {
         return ResponseEntity.ok(new LoginResponseDTO(token));
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/cadastro")
     public ResponseEntity cadastro(@RequestBody @Valid RegistroDTO data) {
         if (this.usuarioRepository.findByLogin(data.login()) != null ) return ResponseEntity.badRequest().build();
